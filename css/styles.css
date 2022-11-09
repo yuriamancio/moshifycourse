@@ -301,12 +301,16 @@ a {
 }
 
 .card--secondary .card__header {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #4996fa;
+}
+
 .card--secondary .badge--secondary {
-  background-color: #02cdf1;
+  background: #02cdf1;
 }
 
 /* Plan */
@@ -337,6 +341,19 @@ a {
 .plan .list__item {
   margin-bottom: 2rem;
   font-weight: 500;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(/images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  right: 5%;
+  top: -6px;
 }
 
 @media screen and (min-width: 1024px) {
